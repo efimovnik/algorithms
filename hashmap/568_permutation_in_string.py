@@ -33,6 +33,8 @@ class Solution:
             if s2[i-window] in counts and i >= window:
                 if counts[s2[i-window]] == 0:
                     matched -= 1
+                counts[s2[i-window]] += 1
+
             if matched == len(counts):
                 return True
         
